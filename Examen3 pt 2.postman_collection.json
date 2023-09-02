@@ -1,0 +1,113 @@
+{
+	"info": {
+		"_postman_id": "2f71f5f7-6b30-4d72-86eb-862484a7c72c",
+		"name": "Examen3 pt 2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25386261"
+	},
+	"item": [
+		{
+			"name": "Get All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9300/api/v1/interestrates",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9300",
+					"path": [
+						"api",
+						"v1",
+						"interestrates"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9300/api/v1/interestrates/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9300",
+					"path": [
+						"api",
+						"v1",
+						"interestrates",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post interest rate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"Tasa de interés 1\",\r\n    \"interestRate\": 5.25,\r\n    \"state\": \"ACT\",\r\n    \"start\": \"2023-09-01T12:00:00.000+0000\",\r\n    \"end\": \"2023-09-01T12:00:00.000+0000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9300/api/v1/interestrates",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9300",
+					"path": [
+						"api",
+						"v1",
+						"interestrates"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post product account",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"1\",\r\n  \"name\": \"Cuenta de Ahorro\",\r\n  \"description\": \"Cuenta de ahorro\",\r\n  \"minimunBalance\": 1000.00,\r\n  \"payInterest\": \"YES\",\r\n  \"acceptsChecks\": \"NO\",\r\n  \"state\": \"ACT\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9300/api/v1/productsaccounts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9300",
+					"path": [
+						"api",
+						"v1",
+						"productsaccounts"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
